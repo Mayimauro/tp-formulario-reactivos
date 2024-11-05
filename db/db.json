@@ -1,0 +1,12 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "nombre": "hacer caca"
+    },
+    {
+      "id": 2,
+      "nombre": "comer"
+    }
+  ]
+}

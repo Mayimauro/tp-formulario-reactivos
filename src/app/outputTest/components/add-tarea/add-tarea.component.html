@@ -1,0 +1,15 @@
+<section>
+  <fieldset>
+    <form [formGroup]="formulario" (ngSubmit)="agregarTarea()">
+    <legend>Alta Tarea</legend>
+      <label>Id:</label>
+      <input type="number" formControlName="id">
+    <label>Tarea:</label>
+    <input type="text" formControlName="nombre">
+      @if (formulario.controls['nombre'].getError('required') && !formulario.controls['nombre'].untouched){
+        <p>Campo requerido y si no master no me vas a cargar una tarea vacia crak</p>
+      }
+    <button>Agregar</button>
+    </form>
+  </fieldset>
+</section>

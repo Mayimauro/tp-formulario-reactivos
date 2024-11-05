@@ -1,0 +1,19 @@
+<app-add-tarea  (mandarDatos)="agregarALista($event)" ></app-add-tarea>
+
+<div>
+  <ul>
+    @if(listaTareas.length==0)
+    {
+      <p>agrega tareas para que se vean</p>
+    } @else {
+      @for (tarea of listaTareas; track $index){
+        <li>
+          id: {{tarea.id}} -
+          Tarea: {{tarea.nombre}}
+         <button href="" (click)="borrarTarea(tarea.id)">Borrar</button>
+         <button [routerLink]="['update', tarea.id]" >Editar</button>
+        </li>
+      }
+    }
+  </ul>
+</div>
